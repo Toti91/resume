@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <div id="app">
+        <div class="segment" id="segment-1">
+            <div id="title">
+                <!--<div id="portrait"></div>-->
+                <h1>Þórarinn G. Árnason</h1>
+                <h2>Web Developer?</h2>
+                <button id="resume" type="submit"><i class="fas fa-file-pdf"></i>Resume</button>
+            </div>
+            <div class="down">
+                <i class="far fa-chevron-circle-down fa-4x" onclick="ScrollTo('segment-2')"></i>
+            </div>
+        </div>
+        <div class="segment" id="segment-2">
+            <div id="info">
+                <div id="schools">
+                    <div class="info-title">
+                        <h2>Menntun</h2>
+                        <i class="fas fa-graduation-cap fa-2x"></i>
+                    </div>
+                    <div class="info-container">
+                        <div class="i-name">
+                            <div class="i-title">Háskólinn í Reykjavík</div>
+                            <div class="i-subtitle">- BSc í tölvunarfræði</div>
+                        </div>
+                        <div class="i-time">2015-2018</div>
+                        <div class="i-description">Stefni á að útskrifast í desember 2018.</div>
+                    </div>
+                    <div class="info-container">
+                        <div class="i-name">
+                            <div class="i-title">Keilir</div>
+                            <div class="i-subtitle">- Verk- og Raunvísindadeild</div>
+                        </div>
+                        <div class="i-time">2014-2015</div>
+                        <div class="i-description">Lauk stúdentsprófi frá Háskólabrú Keilis.</div>
+                    </div>
+                </div>
+                <div id="jobs">
+                    <div class="info-title">
+                        <h2>Fyrri Störf</h2>
+                        <i class="fas fa-briefcase fa-2x"></i>
+                    </div>
+                    <div class="info-container">
+                        <div class="i-name">
+                            <div class="i-title">Heiðarholt</div>
+                            <div class="i-subtitle">- Skammtímavistun</div>
+                        </div>
+                        <div class="i-time">2015-2018</div>
+                        <div class="i-description">Umönnun fatlaðra einstaklinga.</div>
+                    </div>
+                    <div class="info-container">
+                        <div class="i-name">
+                            <div class="i-title">Bílaleiga Akureyrar</div>
+                            <div class="i-subtitle">- Höldur ehf</div>
+                        </div>
+                        <div class="i-time">2011-2015</div>
+                        <div class="i-description">Þjónustufulltrúi í stöð Europcar í Flugstöð.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="down">
+                <i class="far fa-chevron-circle-down fa-4x" onclick="ScrollTo('segment-3')"></i>
+            </div>
+        </div>
+        <div class="segment" id="segment-3">
+            <div id="knowledge">
+                <div id="knowledge-title">
+                    <h2>Tækni</h2>
+                    <i class="fas fa-laptop fa-3x"></i>
+                </div>
+                <div id="tech">
+                    <div class="row">
+                        <i class="fab fa-js-square fa-4x" onmouseover="MoveProgress('JavaScript', 90)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-html5 fa-4x" onmouseover="MoveProgress('Html5', 80)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-node fa-4x" onmouseover="MoveProgress('NodeJS', 80)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-windows fa-4x" onmouseover="MoveProgress('Windows', 75)" onmouseout="MoveProgress('', 0)"></i>
+                    </div>
+                    <div class="row">
+                        <i class="fab fa-angular fa-4x" onmouseover="MoveProgress('Angular 5', 75)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-sass fa-4x" onmouseover="MoveProgress('Scss', 70)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-github fa-4x" onmouseover="MoveProgress('GitHub', 60)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-python fa-4x" onmouseover="MoveProgress('Python', 50)" onmouseout="MoveProgress('', 0)"></i>
+                    </div>
+                    <div class="row">
+                        <i class="fab fa-aws fa-4x" onmouseover="MoveProgress('Amazon Web Services', 40)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-jenkins fa-4x" onmouseover="MoveProgress('Jenkins', 35)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-linux fa-4x" onmouseover="MoveProgress('Linux', 25)" onmouseout="MoveProgress('', 0)"></i>
+                        <i class="fab fa-docker fa-4x" onmouseover="MoveProgress('Docker', 10)" onmouseout="MoveProgress('', 0)"></i>
+                    </div>
+                </div>
+                <div id="progress">
+                    <div id="bar"></div>
+                </div>
+                <div id="tech-name"></div>
+            </div>
+            <div class="down">
+                <i class="far fa-chevron-circle-down fa-4x" onclick="ScrollTo('footer')"></i>
+            </div>
+        </div>
+        <footer id="footer">
+            
+        </footer>
+    </div>
+</body>
+</html>

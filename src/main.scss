@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+$dark: #212121;
+$dark-light: #333333;
+$white: #ececec;
+$white-dark: #9e9e9e;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    h1, h2 ,h3, h4 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.segment {
+    position: relative;
+    height: 100vh;
+    background-color: $dark;
+    font-family: 'Oswald', sans-serif;
+    .down {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 1em;
+        width: 100%;
+        text-align: center;
+        color: $white;
+
+        svg:hover {
+            cursor: pointer;
+            color: $white-dark;
+        }
+    }
+}
+
+#segment-1 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), 
+                url('./public/images/comp.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    button {
+        margin-top: 0.8em;
+        width: 8em;
+        height: 3em;
+        background: none;
+        border: 0.25em solid $white;
+        border-radius: 0.3em;
+        color: $white;
+        font-size: 1.4em;
+        transition: all 0.2s ease;
+        svg {
+            margin-right: 0.4em;
+            font-size: 1.2em;
+        }
+        &:hover {
+            cursor: pointer;
+            color: $white-dark;
+            background: rgba(0, 0, 0, 0.7);
+            border-color: $white-dark;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+    #title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding-left: 1rem;
+        height: 100%;
+
+        h1 {
+            font-size: 3.5em;
+            color: $white;
+        }
+        h2 {
+            color: $white-dark;
+        }
+        #portrait {
+            height: 10em;
+            width: 10em;
+            border-radius: 50%;
+            background-image: url('./public/images/me.jpg');
+            background-size: cover;
+            box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.9);
+
+            &:hover {
+                animation: portrait-hover 0.5s ease;
+            }
+        }
+    }
+}
+#segment-2 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 40%, rgba(255, 255, 255, 0.3)),
+                url('./public/images/school.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    #info {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.7em;
+
+        #schools, #jobs {
+            height: 60%;
+            width: 40%;
+            padding: 1em;
+            font-size: 1.2em;
+            border-radius: 1em;
+
+            .info-title {
+                display: flex;
+                flex-direction: row;
+                font-size: 1.2em;
+
+                svg {
+                    margin-left: 0.3em;
+                }
+            }
+        }
+        #schools {
+            color: $white;
+            .i-time, .i-subtitle {
+                color: $white-dark;
+            }
+        }
+        #jobs {
+            color: $dark;
+            .i-time, .i-subtitle {
+                color: $dark-light;
+            }
+        }
+        .info-container {
+            margin-bottom: 0.4em;
+            .i-name {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+
+                .i-title {
+                    padding-right: 0.4em;
+                    font-weight: bold;
+                }
+                .i-subtitle {
+                    font-size: 0.8em;
+                    font-style: italic;
+                }
+
+            }
+            .i-time {
+                font-size: 0.6em;
+            }
+            .i-description {
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+#segment-3 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('./public/images/tech.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    #knowledge {
+        color: $white;
+        font-size: 1.2em;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        #knowledge-title {
+            margin-top: 1em;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            
+            h2 {
+                font-size: 2.8em;
+            }
+            svg {
+                margin-left: 0.3em;
+            }
+        }
+        #tech {
+            margin-top: 2em;
+
+            .row {
+                svg {
+                    margin: 0.1em;
+                    &:hover {
+                        color: $white-dark;
+                    }
+                }
+            }
+        }
+        #progress {
+            background: none;
+            margin-top: 0.8em;
+            width: 30%;
+            height: 3em;
+            background: none;
+            border: 0.25em solid $white;
+            border-radius: 0.3em;
+            #bar {
+                color: $dark;
+                height: 100%;
+                width: 0;
+                background-color: $white-dark;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 1s ease;
+            }
+        }
+
+    }
+}
+
+footer {
+    position: relative;
+    background-color: $dark;
+    height: 100vh;
+
+    .up {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 1em;
+        width: 100%;
+        text-align: center;
+        color: $white;
+
+        svg:hover {
+            cursor: pointer;
+            color: $white-dark;
+        }
+    }
+}
+
+.wiggle {
+    animation: wiggle 1s ease-in-out;
+    animation-iteration-count: 1;
+    -webkit-animation: wiggle 1s ease-in-out;
+    -webkit-animation-iteration-count: 1;
+}
+
+@keyframes wiggle {
+    0% {-webkit-transform: rotate(5deg);}
+    25% {-webkit-transform: rotate(-5deg);}
+    50% {-webkit-transform: rotate(10deg);}
+    75% {-webkit-transform: rotate(-2.5deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes wiggle {
+    0% {-webkit-transform: rotate(5deg);}
+    25% {-webkit-transform: rotate(-5deg);}
+    50% {-webkit-transform: rotate(10deg);}
+    75% {-webkit-transform: rotate(-2.5deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
