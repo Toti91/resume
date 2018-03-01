@@ -12,7 +12,7 @@ window.MoveProgress = (name, amount) => {
     bar.style.width = amount + '%';
     bar.style.backgroundColor = getColorAtScalar(amount, 100);
 
-    if(amount !== 0) {
+    if (amount !== 0) {
         bar.innerHTML = amount + '%';
         tech.innerHTML = name;
     }
@@ -31,13 +31,13 @@ window.ScrollTo = (name) => {
     let oTop = document.getElementById(name).offsetTop;
     ScrollToResolver(document.documentElement, oTop, 400);
 }
-  
+
 function ScrollToResolver(element, to, duration) {
     if (duration < 0) return;
     var difference = to - element.scrollTop;
     var perTick = difference / duration * 10;
 
-    setTimeout(function() {
+    setTimeout(function () {
         element.scrollTop = element.scrollTop + perTick;
         if (element.scrollTop === to) return;
         ScrollToResolver(element, to, duration - 10);
