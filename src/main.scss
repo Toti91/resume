@@ -301,7 +301,19 @@ html, body {
 
 @media only screen and (max-width : 750px) {
     .segment {
-        font-size: 2vh !important;
+        font-size: 1em !important;
+
+        .down {
+            display: none;
+        }
+    }
+    #segment-1 {
+        #title {
+            padding-left: 1.2em;
+            span {
+                display: none;
+            }
+        }
     }
     #segment-2 {
         #info {
@@ -326,6 +338,12 @@ html, body {
             #jobs {
                 padding-top: 0;
             }
+        }
+    }
+    #segment-3 {
+        #progress {
+            width: 85vw !important;
+            margin-top: 2em !important;
         }
     }
 }
